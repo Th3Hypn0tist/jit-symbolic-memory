@@ -1,31 +1,81 @@
-# MVP AI CLI (Codex-style)
+# JIT Symbolic Memory Architecture for LLMs
 
-Minimal CLI + API that can talk to **any AI provider** via adapters, and supports:
-- add/get/update/list records
-- ask an AI using selected records as context
+Stateless semantic memory effect for LLM systems  
+PostgreSQL, Symbols, Just-In-Time Meaning, Ollama / LLaMA
 
-## Quickstart
+---
 
-```bash
-python -m venv .venv && . .venv/bin/activate
-pip install -r requirements.txt
+## TL;DR
 
-# Start API
-uvicorn api:app --reload
+Stateless symbolic memory for LLMs:
 
-# In another terminal:
-python cli.py add rule "Store semantics. Compute meaning. Never confuse the two."
-python cli.py add db "SQL stores facts + canonical semantics. No interpretations."
-python cli.py ask "Summarize in 2 sentences." --keys rule,db
-```
+- store facts and canonical semantics
+- compute meaning only at runtime
+- keep models honest and repeatable
 
-## Provider routing
+This architecture produces a memory effect without persistent memory.
 
-Environment defaults (API side):
-- `AI_PROVIDER` = `ollama` or `openai_compat`
-- `AI_MODEL` = provider model id
-- `AI_BASE_URL` = provider base url
-- `AI_API_KEY` = bearer key (openai_compat)
+One Pizza License applies.
 
-CLI can override per call:
-- `--provider`, `--model`, `--base-url`, `--api-key`
+---
+
+## Why this exists
+
+Large Language Models do not have memory in the traditional sense.
+
+Attempts to give them one usually fail by:
+- storing interpretations instead of facts
+- polluting context windows
+- creating hidden state
+- mixing probabilistic reasoning with deterministic storage
+
+This architecture takes the opposite approach:
+
+LLMs should not store meaning.  
+They should compute it when needed.
+
+---
+
+## Core Idea
+
+Memory effect without memory by strict separation:
+
+PostgreSQL -> Symbols -> JIT Meaning Activation -> LLM Reasoning
+
+- SQL stores facts and canonical semantics
+- Symbols are pointers, not meaning containers
+- Meaning is computed just-in-time
+- LLM remains stateless
+
+---
+
+## Design Principles
+
+- No stored meaning
+- Meaning computed at runtime
+- Stateless reasoning
+- Deterministic storage
+
+---
+
+## License
+
+Attribution-Only, No-Derivatives License (A-ND)
+
+Copyright (c) 2026  
+Aki Hirvilammi
+
+---
+
+## One Pizza License (OPL)
+
+- One-time fee
+- One pizza per end user
+- Pizza price is the average price in the user's country
+- No recurring payments
+
+Payment network: Cronos (EVM)
+
+Payment address:
+
+0xAddc61aF05ACc594623c3e73D242C17d169A28b2
