@@ -1,4 +1,4 @@
-# MVP AI CLI (Codex-style)
+# JIT Symbolic Memory MVP AI CLI 
 
 Minimal CLI + API that can talk to **any AI provider** via adapters, and supports:
 - add/get/update/list records
@@ -183,3 +183,5 @@ License check:
 Once a valid txid exists, the agent may operate without restrictions.
 
 🍕 One Pizza License — simple, fair, and explicit.
+
+Large-scale or enterprise usage may be subject to negotiated terms.
