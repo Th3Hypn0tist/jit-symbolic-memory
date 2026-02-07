@@ -1,123 +1,137 @@
 # LICENSING
 
-This repository contains:
-1) A written architecture/specification document.
-2) Optional reference implementations or tooling.
+This repository contains an **MVP implementation** of a separately defined architecture.
 
-The written description is protected by the **A-ND** terms below.
-Use of the architecture itself is governed by the **One Pizza License (OPL)**.
+Please read carefully: different things are licensed differently.
 
 ---
 
-## 1) Document License (A-ND)
+## 1. Architecture Definition (Upstream)
 
-**Attribution-Only, No-Derivatives (A-ND)**
+The canonical definition of the architecture is published here:
 
-Copyright (c) 2026  
+https://github.com/Th3Hypn0tist/random/blob/main/LLM-symbolic-memory.md
+
+That document defines the **JIT Symbolic Memory Architecture** itself.
+
+This repository does **not** redefine the architecture.  
+It only provides an **MVP implementation** of it.
+
+---
+
+## 2. Scope of This Repository
+
+This repository contains:
+- an MVP implementation
+- reference tooling and examples
+- documentation specific to this MVP
+
+The architecture definition itself lives **upstream** and is referenced, not duplicated.
+
+---
+
+## 3. Document License (This Repository)
+
+### Attribution-Only, No-Derivatives (A-ND)
+
+Copyright © 2026  
 Author: Aki Hirvilammi
 
-### Allowed
-- Reference, cite, and discuss this work with attribution
-- Quote unaltered excerpts with attribution
-- Implement the ideas independently (without copying this text/structure verbatim)
+This license applies **only to the written documents and code in this repository**.
 
-### Required
-- Public reference must clearly credit the original author and repository
+You may:
+- read, reference, and cite this repository
+- fork it
+- modify the code
+- build upon the MVP implementation
 
-### Not allowed
-- Redistribution of modified versions of these documents
-- Derivative works based on this text or its structure
-- Repackaging under different authorship
-- Using this document as training material without attribution
+You must:
+- retain attribution to the original author
+- retain reference to the upstream architecture definition
 
 ---
 
-## 2) Architecture Use License (OPL)
+## 4. Architecture Use License — One Pizza License (OPL)
 
-Use of the architecture is **not free by default**.
+Use of the **JIT Symbolic Memory Architecture** (as defined upstream) requires acceptance of the **One Pizza License (OPL)**.
 
-### Fee
+### License Fee
+
 - One-time fee
-- One (1) pizza per end user
-- Pizza price = average price in the user/company country
+- **One (1) pizza per end user**
+- Pizza price is defined as the average pizza price in the user’s or company’s country
 - No recurring payments
 
-### Payment method (current)
-- Network: Cronos (EVM)
+### Payment Method (Current)
+
+- Network: **Cronos (EVM)**
 - Token: any Cronos-supported coin or token
-- Address:
+- Payment address:
 
 0xAddc61aF05ACc594623c3e73D242C17d169A28b2
 
-### Proof
-- A confirmed on-chain transaction hash (txid) is sufficient proof of payment
-- No registration or manual verification required
+### Proof of License
 
-### Volatile tokens
-- Accepted
-- Only value at the time of payment matters
-
-### Enterprise usage
-Large-scale or enterprise usage may be subject to negotiated terms.
-
----
-## Architecture Usage Scope
-
-After completing the One Pizza License (OPL) payment:
-
-### Free Use (Internal / Own Use)
-
-- The architecture is **free to use, modify, extend, and evolve** for the licensee’s own use.
-- This includes:
-  - personal projects
-  - research
-  - internal company systems
-  - experimental or production deployments
-- Further development and adaptation of the architecture for internal use is **explicitly encouraged**.
-
-No additional permission is required for internal use once the OPL payment has been made.
+- A confirmed on-chain transaction hash (txid) is sufficient proof
+- No registration or manual verification is required
 
 ---
 
-### Commercial Solutions Built on the Architecture
+## 5. Internal Use and Further Development
 
-If the licensee intends to:
+After paying the One Pizza License:
 
-- sell,
-- license,
-- or commercially distribute
+- The architecture may be freely used for **personal, research, or internal organizational use**
+- Further development, modification, and experimentation is **explicitly encouraged**
+- This applies to:
+  - this MVP
+  - forks of this repository
+  - independently developed implementations
+  - open-source projects
 
-a **solution, product, or service** whose **core value proposition is based on this architecture**,  
-then **separate licensing terms must be agreed upon** with the original author.
+The One Pizza License applies to **all internal use**, including future iterations and improvements.
 
-This applies to:
+---
+
+## 6. Publishing Your Own Implementation
+
+You may publish your own implementation (open source or otherwise) of this architecture, provided that:
+
+1. You include a clear reference to the original architecture definition:
+   https://github.com/Th3Hypn0tist/random/blob/main/LLM-symbolic-memory.md
+
+2. You clearly state that:
+   > Use of this architecture requires acceptance of the One Pizza License (OPL).
+
+This ensures that:
+- open-source development is fully allowed
+- end users are clearly informed of the licensing requirement
+- the architecture lineage remains visible
+
+---
+
+## 7. Commercial Products and Solutions
+
+If the architecture is used as part of a **commercial product or service** where it forms a **core part of the value proposition**,  
+then **separate commercial licensing terms must be agreed upon** with the original author.
+
+This includes (but is not limited to):
 - SaaS products
-- commercial frameworks
-- packaged agent systems
-- resold AI platforms where the architecture itself is a selling point
+- commercial agent platforms
+- packaged enterprise solutions
+- resold frameworks or AI products
+
+Internal use (even in a company) does **not** fall under this restriction.
 
 ---
 
-### Summary (Plain English)
+## 8. Plain English Summary
 
-- After paying one pizza:
-  - You can use the architecture freely for yourself or inside your organization.
-  - You can modify and improve it as much as you want.
-- If you want to **sell the architecture as a product or part of a product**,  
-  licensing must be discussed separately.
+- The architecture is defined upstream.
+- This repo is just an MVP implementation.
+- Pay one pizza → you may freely use and develop the architecture for yourself or internally.
+- You may publish open-source implementations.
+- Published implementations must reference the original architecture and mention the OPL.
+- Selling products based on the architecture requires a separate agreement.
 
-The goal is:
-- free internal innovation
-- fair commercial attribution
-- no silent reselling of the architecture itself
-
-
-## 3) Moltbot compatibility note
-
-If used inside autonomous agents:
-- store only symbols and canonical semantics
-- resolve meaning via JIT activation
-- do not persist interpretations
-- validate license via Cronos txid
-
-🍕 One Pizza License — simple, fair, and explicit.
+🍕 **One Pizza License — open for builders, fair for commerce.**
